@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   title: 'REBOOTED | Premium Gaming Solutions',
   description: 'Premium HWID Spoofer & Gaming Enhancement Tools. Undetected, Fast Support, Instant Delivery.',
   keywords: ['HWID Spoofer', 'Gaming Tools', 'Rainbow Six Siege', 'Fortnite', 'PUBG', 'Apex Legends'],
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: 'REBOOTED | Premium Gaming Solutions',
     description: 'Premium HWID Spoofer & Gaming Enhancement Tools',

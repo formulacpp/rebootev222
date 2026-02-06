@@ -138,6 +138,7 @@ export function PricingSection() {
                       variants={glowPulse}
                       initial="initial"
                       animate="animate"
+                      className="rounded-xl"
                     >
                       <CheckoutButton
                         productId={tier.sellAuthVariantId || ''}

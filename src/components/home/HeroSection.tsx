@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowRight, Shield, Zap, Users, Flame, Gamepad2 } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowRight, Shield, Zap, Users, Flame } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { fadeUp, staggerContainer, floatAnimation, glowPulse } from '@/lib/animations'
@@ -66,6 +67,7 @@ export function HeroSection() {
                 variants={glowPulse}
                 initial="initial"
                 animate="animate"
+                className="rounded-lg"
               >
                 <Button size="lg" className="text-lg px-8">
                   Shop Now
@@ -98,24 +100,22 @@ export function HeroSection() {
             ))}
           </motion.div>
 
-          {/* Floating Product Image */}
+          {/* Product Image */}
           <motion.div
             variants={floatAnimation}
             initial="initial"
             animate="animate"
-            className="mt-16 relative"
+            className="mt-16"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-surface-bg via-transparent to-transparent z-10" />
-            <div className="relative max-w-4xl mx-auto">
-              <div className="aspect-video bg-surface-panel rounded-2xl border border-surface-stroke overflow-hidden shadow-2xl shadow-primary/20">
-                {/* Placeholder for product showcase - can be replaced with actual image */}
-                <div className="w-full h-full bg-gradient-to-br from-surface-panel to-surface-elevated flex items-center justify-center">
-                  <div className="text-center">
-                    <Gamepad2 className="w-24 h-24 text-primary mx-auto mb-4" />
-                    <p className="text-text-muted">Premium Gaming Tools</p>
-                  </div>
-                </div>
-              </div>
+            <div className="max-w-md mx-auto">
+              <Image
+                src="/images/hero.png"
+                alt="Premium Gaming Tools"
+                width={504}
+                height={504}
+                className="w-full h-auto object-contain"
+                priority
+              />
             </div>
           </motion.div>
         </motion.div>

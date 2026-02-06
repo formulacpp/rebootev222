@@ -1,0 +1,7 @@
+{
+  "/page": "app/page.js",
+  "/resellers/page": "app/resellers/page.js",
+  "/status/page": "app/status/page.js",
+  "/store/[slug]/page": "app/store/[slug]/page.js",
+  "/store/page": "app/store/page.js"
+}

@@ -23,6 +23,7 @@ export function ProductCard({ product }: ProductCardProps) {
       variants={cardHover}
       initial="initial"
       whileHover="hover"
+      className="rounded-xl"
     >
       <Link href={`/store/${product.slug}`}>
         <Card className="h-full overflow-hidden group">

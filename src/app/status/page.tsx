@@ -1,23 +1,24 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CheckCircle, Gamepad2, Target, Crosshair, Skull, Flame, Car, Sword, Ghost, Bomb } from 'lucide-react'
+import Image from 'next/image'
+import { CheckCircle } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 
-// Game icons mapping
-const gameIcons: Record<string, any> = {
-  'Fortnite': Crosshair,
-  'Rainbow Six Siege': Target,
-  'PUBG': Crosshair,
-  'Apex Legends': Skull,
-  'Rust': Flame,
-  'Call of Duty': Target,
-  'Escape from Tarkov': Bomb,
-  'FiveM': Car,
-  'Delta Force': Sword,
-  'Dead By Daylight': Ghost,
+// Game icon images mapping
+const gameImages: Record<string, string> = {
+  'Fortnite': '/images/games/fortnite.png',
+  'Rainbow Six Siege': '/images/games/rainbow.png',
+  'PUBG': '/images/games/pubg.png',
+  'Apex Legends': '/images/games/apex.png',
+  'Rust': '/images/games/rust.png',
+  'Call of Duty': '/images/games/cod.png',
+  'Escape from Tarkov': '/images/games/eft.png',
+  'FiveM': '/images/games/gta.png',
+  'Delta Force': '/images/games/deltaforce.png',
+  'Dead By Daylight': '/images/games/dbd.png',
 }
 
 const games = [
@@ -93,13 +94,12 @@ export default function StatusPage() {
             <h3 className="text-lg font-semibold text-text-primary mb-4">Supported Games</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {games.map((game) => {
-                const Icon = gameIcons[game.name] || Gamepad2
                 return (
                   <Card key={game.name} className="p-4">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="p-2 rounded-lg bg-surface-elevated">
-                          <Icon className="w-5 h-5 text-primary" />
+                        <div className="p-2 rounded-lg">
+                          <Image src={gameImages[game.name]} alt={game.name} width={28} height={28} className="w-7 h-7 object-contain" />
                         </div>
                         <span className="font-medium text-text-primary">{game.name}</span>
                       </div>
@@ -118,7 +118,7 @@ export default function StatusPage() {
           <motion.div variants={fadeUp} className="mt-8">
             <h3 className="text-lg font-semibold text-text-primary mb-4">Products</h3>
             <div className="space-y-3">
-              {['Crusader R6S', 'Onyx Full', 'Onyx Lite', 'Perc R6S', 'Temp Spoofer'].map((product) => (
+              {['Temp Spoofer', 'Fortnite'].map((product) => (
                 <Card key={product} className="p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
