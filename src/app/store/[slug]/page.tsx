@@ -165,6 +165,7 @@ export default function ProductPage() {
                 variants={glowPulse}
                 initial="initial"
                 animate="animate"
+                className="rounded-xl"
               >
                 <CheckoutButton
                   productId={product.sellAuthProductId}

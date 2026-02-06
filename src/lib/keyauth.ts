@@ -198,7 +198,7 @@ export class KeyAuthAPI {
       mask: params.mask || '******-******-******-******',
       level: params.level || 1,
       amount: params.amount || 1,
-      character: params.character || 1, // Default to uppercase
+      character: params.character || 2, // Default to uppercase
       ...(params.note && { note: params.note }),
     })
   }

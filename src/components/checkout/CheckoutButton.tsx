@@ -25,8 +25,8 @@ export function CheckoutButton({
 }: CheckoutButtonProps) {
   const { checkoutSingle, isLoaded, isLoading } = useSellAuth()
 
-  // Check if product IDs are configured
-  const isConfigured = productId && variantId
+  // Check if product ID is configured
+  const isConfigured = !!productId
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault()

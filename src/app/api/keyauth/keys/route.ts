@@ -107,8 +107,17 @@ export async function POST(request: NextRequest) {
       mask: mask || '******-******-******-******',
       note: tagNote(note, licenseKey), // Tag with reseller's license key
       level: parseInt(level, 10) || 1,
-      character: 1, // 1 = uppercase only, 2 = lowercase only
+      character: 2, // 2 = uppercase only
     })
+
+    // Force uppercase and remove spaces from any returned keys
+    const cleanKey = (k: string) => k.replace(/\s/g, '').toUpperCase()
+    if (result.key) {
+      result.key = cleanKey(result.key)
+    }
+    if (result.keys) {
+      result.keys = result.keys.map((k: string) => cleanKey(k))
+    }
 
     return NextResponse.json(result)
   } catch (error) {
@@ -147,6 +156,18 @@ export async function DELETE(request: NextRequest) {
           { error: 'Key not found or access denied' },
           { status: 403 }
         )
+      }
+    }
+
+    // If the key was used by someone, delete that user too
+    if (allKeys.success && allKeys.keys) {
+      const keyData = allKeys.keys.find((k: any) => k.key === key)
+      if (keyData?.usedby) {
+        try {
+          await keyAuth.deleteUser(keyData.usedby)
+        } catch (err) {
+          console.error('Failed to delete associated user:', err)
+        }
       }
     }
 

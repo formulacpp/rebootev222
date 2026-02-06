@@ -50,12 +50,12 @@ export const products: Product[] = [
     antiCheat: 'All',
     platforms: ['All'],
     includesSpoofer: true,
-    sellAuthProductId: '',
+    sellAuthProductId: '465195',
     variants: [
-      { id: 'day', label: '1 Day', price: 4.99, sellAuthVariantId: '' },
-      { id: 'week', label: '1 Week', price: 19.99, sellAuthVariantId: '' },
-      { id: 'month', label: '1 Month', price: 49.99, sellAuthVariantId: '' },
-      { id: '3month', label: '3 Month', price: 99.99, originalPrice: 149.99, sellAuthVariantId: '', isBestValue: true },
+      { id: 'day', label: '1 Day', price: 4.99, sellAuthVariantId: '683065' },
+      { id: 'week', label: '1 Week', price: 19.99, sellAuthVariantId: '952727' },
+      { id: 'month', label: '1 Month', price: 49.99, sellAuthVariantId: '952727' },
+      { id: '3month', label: '3 Month', price: 99.99, originalPrice: 149.99, sellAuthVariantId: '952732', isBestValue: true },
     ],
     features: {
       misc: ['Hyper-V Technology', 'Trace Removers', 'TPM Virtualization', 'Custom Seeding System', 'Advanced Live Status', 'Serial Checker', 'Reward System', 'Multiple Language Support'],
