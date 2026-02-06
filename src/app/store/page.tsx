@@ -23,7 +23,7 @@ export default function StorePage() {
           className="text-center mb-12"
         >
           <motion.div variants={fadeUp}>
-            <Badge variant="gold" className="mb-4 flex items-center gap-1">
+            <Badge variant="gold" className="mb-4 inline-flex items-center gap-1">
               <Flame className="w-4 h-4" /> Limited Time Deals
             </Badge>
           </motion.div>

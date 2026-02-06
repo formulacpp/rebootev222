@@ -84,15 +84,12 @@ export function ProductCard({ product }: ProductCardProps) {
             {/* Features Preview */}
             <div className="mt-4 pt-4 border-t border-surface-stroke">
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-2 py-1 bg-surface-elevated rounded text-text-muted">
-                  {product.antiCheat}
-                </span>
-                {product.platforms.slice(0, 2).map((platform) => (
+                {product.antiCheat.split(',').map((ac) => (
                   <span
-                    key={platform}
+                    key={ac.trim()}
                     className="text-xs px-2 py-1 bg-surface-elevated rounded text-text-muted"
                   >
-                    {platform}
+                    {ac.trim()}
                   </span>
                 ))}
               </div>

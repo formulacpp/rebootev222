@@ -141,7 +141,7 @@ export function PricingSection() {
                       className="rounded-xl"
                     >
                       <CheckoutButton
-                        productId={tier.sellAuthVariantId || ''}
+                        productId={'465195'}
                         variantId={tier.sellAuthVariantId || ''}
                         label="Get Started"
                         className="w-full"
@@ -149,7 +149,7 @@ export function PricingSection() {
                     </motion.div>
                   ) : (
                     <CheckoutButton
-                      productId={tier.sellAuthVariantId || ''}
+                      productId={'465195'}
                       variantId={tier.sellAuthVariantId || ''}
                       label="Select Plan"
                       className="w-full"

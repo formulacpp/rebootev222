@@ -47,8 +47,8 @@ export const products: Product[] = [
     videoUrl: 'https://www.youtube.com/embed/Ogd019onPV4',
     isBestSeller: true,
     badge: 'BEST SELLER',
-    antiCheat: 'All',
-    platforms: ['All'],
+    antiCheat: 'EAC, BE, JAV, ACE, RICO',
+    platforms: ['EAC', 'BE', 'JAV', 'ACE', 'RICO'],
     includesSpoofer: true,
     sellAuthProductId: '465195',
     variants: [
@@ -80,9 +80,10 @@ export const products: Product[] = [
     includesSpoofer: false,
     sellAuthProductId: '',
     variants: [
-      { id: 'day', label: '1 Day', price: 4.99, sellAuthVariantId: '' },
-      { id: 'week', label: '1 Week', price: 19.99, sellAuthVariantId: '' },
-      { id: 'month', label: '1 Month', price: 49.99, sellAuthVariantId: '', isBestValue: true },
+      { id: '3day', label: '3 Day', price: 25, sellAuthVariantId: '' },
+      { id: 'week', label: '1 Week', price: 49.99, sellAuthVariantId: '' },
+      { id: 'month', label: '1 Month', price: 75, sellAuthVariantId: '', isBestValue: true },
+      { id: 'lifetime', label: 'Lifetime', price: 150, sellAuthVariantId: '' },
     ],
     features: {
       visual: ['Player ESP', 'Box ESP', 'Distance ESP', 'Health ESP', 'Skeleton ESP', 'Item ESP', 'Chest ESP'],
@@ -124,7 +125,7 @@ export const homePricingTiers = [
       { name: 'License Freeze', included: false },
       { name: 'Self HWID Reset', included: false },
     ],
-    sellAuthVariantId: '',
+    sellAuthVariantId: '683065',
   },
   {
     name: 'Weekly',
@@ -140,7 +141,7 @@ export const homePricingTiers = [
       { name: 'License Freeze', included: false },
       { name: 'Self HWID Reset', included: false },
     ],
-    sellAuthVariantId: '',
+    sellAuthVariantId: '952727',
   },
   {
     name: 'Monthly',
@@ -156,7 +157,7 @@ export const homePricingTiers = [
       { name: 'License Freeze', included: true },
       { name: 'Self HWID Reset', included: false },
     ],
-    sellAuthVariantId: '',
+    sellAuthVariantId: '952727',
   },
   {
     name: '90-Day',
@@ -175,7 +176,7 @@ export const homePricingTiers = [
       { name: 'License Freeze', included: true },
       { name: 'Self HWID Reset', included: true },
     ],
-    sellAuthVariantId: '',
+    sellAuthVariantId: '952732',
     highlighted: true,
   },
 ]
