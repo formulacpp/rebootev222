@@ -1,0 +1,7 @@
+export { HeroSection } from './HeroSection'
+export { WhyChooseSection } from './WhyChooseSection'
+export { StatsSection } from './StatsSection'
+export { GamesSlider } from './GamesSlider'
+export { PricingSection } from './PricingSection'
+export { FAQSection } from './FAQSection'
+export { ContactSection } from './ContactSection'
